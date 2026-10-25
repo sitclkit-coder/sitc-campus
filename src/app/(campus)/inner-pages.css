@@ -244,6 +244,10 @@
     color: var(--muted);
     margin: 0;
   }
+  .partner-name .partner-visit {
+    margin-top: 16px;
+    white-space: nowrap;
+  }
   .partner-description {
     color: var(--muted);
     font-size: 14px;
@@ -844,6 +848,9 @@
     }
     .partner-name h2 {
       font-size: 24px;
+    }
+    .partner-name .partner-visit {
+      margin-top: 12px;
     }
     .featured-story {
       grid-template-columns: 1fr;

@@ -4,6 +4,7 @@ import {
   PageStructuredData,
   PageCallToAction,
 } from '@/components/inner-page';
+import { ButtonLink } from '@/components/ui/button-link';
 import { academicPartners } from '@/content/partners';
 import { mainPageSeo } from '@/lib/page-seo';
 
@@ -43,6 +44,18 @@ export default function PartnersPage() {
               <div className="partner-name">
                 <h2>{partner.name}</h2>
                 <p>{partner.role}</p>
+                {'url' in partner && (
+                  <ButtonLink
+                    small
+                    className="partner-visit"
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit the ${partner.name} website`}
+                  >
+                    Visit website ↗
+                  </ButtonLink>
+                )}
               </div>
               <p className="partner-description">{partner.description}</p>
             </article>
